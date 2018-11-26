@@ -1,0 +1,10 @@
+.rui-file-input-container([ngClass]='[fieldData.inputFormControl.invalid ? "invalid" : "", (fieldData.inputFormControl.dirty || fieldData.inputFormControl.touched) ? "non-pristine" : "", fieldData.inputFormControl.value !== "" ? "has-value" : ""]')
+	div
+		label.placeholder {{fieldData.placeholder}}
+	.file-preview.image-container(*ngIf='fieldData.preview && (backgroundImageUrl !== "")', [ngStyle]='{"background-image": backgroundImageUrl, width: previewWidth, height: previewHeight}')
+	div.button-wrapper([ngStyle]='{width: fieldData.hideFileName ? previewWidth : "auto"}')
+		label.mat-raised-button(for='file-input', [ngStyle]='{width: fieldData.hideFileName ? "100%" : "auto"}') Choose File
+		span.file-name(*ngIf='!fieldData.hideFileName') {{fieldData.inputFormControl.value === '' ? 'No file chosen...' : fileName}}
+		input#file-input(type='file', (change)='onFileChange($event)')
+	div.errors-container
+		include ../base/baseInput.commonElementsTemplate.pug

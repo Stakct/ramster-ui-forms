@@ -1,0 +1,26 @@
+{
+  "name": "ramster-ui-forms",
+  "version": "0.0.1",
+  "description": "A forms and inputs package that goes together with the other ramster-ui packages.",
+  "main": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RazorDude/ramster-ui-forms.git"
+  },
+  "author": {
+    "name": "Rumen Rumenov",
+    "email": "mmetalonlyy@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RazorDude/ramster-ui-forms/issues"
+  },
+  "homepage": "https://github.com/RazorDude/ramster-ui-forms#readme",
+  "dependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0",
+    "@angular/forms": "^7.1.0",
+    "@angular/material": "^7.1.0"
+  }
+}

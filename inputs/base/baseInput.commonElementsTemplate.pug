@@ -1,0 +1,3 @@
+mat-hint(*ngIf=`fieldData.hint !== ''`) {{hint}}
+mat-error(*ngIf='fieldData.inputFormControl.invalid && (fieldData.inputFormControl.dirty || fieldData.inputFormControl.touched) && fieldData.inputFormControl.errors')
+	span(*ngFor='let errorKey of JSObject.keys(fieldData.inputFormControl.errors)') {{errorMessages[errorKey]}}
