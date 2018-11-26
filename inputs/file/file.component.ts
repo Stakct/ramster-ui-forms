@@ -2,9 +2,9 @@ import {Component, Input} from '@angular/core'
 import moment from 'moment'
 
 import {BaseInputComponent} from '../base/baseInput.component'
-import {GlobalEventsService} from '../../../services/globalEvents/globalEvents.service'
+import {GlobalEventsService} from 'ramster-ui-core/services/globalEvents/globalEvents.service'
 import {FileInputFieldDataInterface} from './file.interfaces'
-import {FilesRESTService} from '../../../services/filesREST.service'
+import {FilesRESTService} from 'ramster-ui-core/services/filesREST.service'
 
 
 @Component({

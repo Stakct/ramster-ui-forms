@@ -1,6 +1,6 @@
 {
   "name": "ramster-ui-forms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A forms and inputs package that goes together with the other ramster-ui packages.",
   "main": "",
   "scripts": {},
@@ -17,10 +17,19 @@
     "url": "https://github.com/RazorDude/ramster-ui-forms/issues"
   },
   "homepage": "https://github.com/RazorDude/ramster-ui-forms#readme",
-  "dependencies": {
+  "peerDependencies": {
+    "@angular/animations": "^7.1.0",
+    "@angular/cdk": "^7.1.0",
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0",
     "@angular/forms": "^7.1.0",
-    "@angular/material": "^7.1.0"
+    "@angular/material": "^7.1.0",
+    "@angular/platform-browser": "^7.1.0",
+    "@angular/router": "^7.1.0",
+    "co": "^4.6.0",
+    "moment": "^2.22.2",
+    "ramster-ui-core": "0.0.3",
+    "rxjs": "^6.3.3",
+    "zone.js": "^0.8.26"
   }
 }

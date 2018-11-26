@@ -3,8 +3,8 @@ import {FormControl} from '@angular/forms'
 
 import {AutocompleteFieldDataInterface} from './autocomplete.interfaces'
 import {BaseInputComponent} from '../base/baseInput.component'
-import {BaseRESTService} from '../../../services/baseREST.service'
-import {SelectListInterface} from '../../../interfaces/selectList.interface'
+import {BaseRESTService} from 'ramster-ui-core/services/baseREST.service'
+import {SelectListInterface} from 'ramster-ui-core/interfaces/selectList.interface'
 
 @Component({
 	selector: 'rui-autocomplete',
