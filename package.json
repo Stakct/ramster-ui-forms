@@ -1,8 +1,8 @@
 {
   "name": "ramster-ui-forms",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A forms and inputs package that goes together with the other ramster-ui packages.",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "build": "node ./webpackBuild.js"
   },

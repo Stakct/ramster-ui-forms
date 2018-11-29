@@ -1,3 +1,6 @@
+# 0.0.4
+Added an index.js file.
+
 # 0.0.3
 Whoops! Forgot to build stuff! Hehe :)
 Added a build script to package.json.
