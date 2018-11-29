@@ -1,6 +1,6 @@
 import {AbstractControl} from '@angular/forms'
 import {BaseInputFieldDataInterface} from '../base/baseInput.interfaces'
-import {BaseRESTService} from 'ramster-ui-core/services/baseREST.service'
+import {BaseRESTService} from 'ramster-ui-core'
 
 export interface AutocompleteFieldDataInterface extends BaseInputFieldDataInterface {
 	filteredSelectListMaxLength?: number,
