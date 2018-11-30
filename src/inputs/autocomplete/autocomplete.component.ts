@@ -7,8 +7,7 @@ import {BaseRESTService, SelectListInterface} from 'ramster-ui-core'
 
 @Component({
 	selector: 'rui-autocomplete',
-	templateUrl: './autocomplete.template.pug'
-	// template: require('./autocomplete.template.pug')
+	templateUrl: './autocomplete.template.html'
 })
 export class AutocompleteComponent extends BaseInputComponent {
 	@Input()

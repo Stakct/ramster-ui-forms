@@ -6,8 +6,7 @@ import {TextareaFieldDataInterface} from './textarea.interfaces'
 
 @Component({
 	selector: 'rui-textarea',
-	templateUrl: './textarea.template.pug'
-	// template: require('./textarea.template.pug')
+	templateUrl: './textarea.template.html'
 })
 export class TextareaComponent extends BaseInputComponent {
 	@Input()

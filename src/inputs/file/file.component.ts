@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core'
-import moment from 'moment'
+import * as moment from 'moment'
 
 import {BaseInputComponent} from '../base/baseInput.component'
 import {GlobalEventsService, FilesRESTService} from 'ramster-ui-core'
@@ -9,9 +9,9 @@ import {FileInputFieldDataInterface} from './file.interfaces'
 @Component({
 	selector: 'rui-file-input',
 	styleUrls: [
-		'./file.styles.scss'
+		'./file.styles.css',
 	],
-	templateUrl: './file.template.pug'
+	templateUrl: './file.template.html'
 })
 export class FileInputComponent extends BaseInputComponent {
 	@Input()

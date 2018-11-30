@@ -6,7 +6,7 @@ import {InputFieldDataInterface} from './input.interfaces'
 
 @Component({
 	selector: 'rui-input',
-	templateUrl: './input.template.pug'
+	templateUrl: './input.template.html'
 })
 export class InputComponent extends BaseInputComponent {
 	@Input()

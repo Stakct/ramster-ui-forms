@@ -6,8 +6,7 @@ import {CheckboxFieldDataInterface} from './checkbox.interfaces'
 
 @Component({
 	selector: 'rui-checkbox',
-	templateUrl: './checkbox.template.pug'
-	// template: require('./checkbox.template.pug')
+	templateUrl: './checkbox.template.html'
 })
 export class CheckboxComponent extends BaseInputComponent {
 	@Input()

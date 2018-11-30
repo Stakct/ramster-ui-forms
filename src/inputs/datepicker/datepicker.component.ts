@@ -6,8 +6,7 @@ import {DatepickerFieldDataInterface} from './datepicker.interfaces'
 
 @Component({
 	selector: 'rui-datepicker',
-	templateUrl: './datepicker.template.pug'
-	// template: require('./datepicker.template.pug')
+	templateUrl: './datepicker.template.html'
 })
 export class DatepickerComponent extends BaseInputComponent {
 	@Input()

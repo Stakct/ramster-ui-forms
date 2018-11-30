@@ -6,8 +6,7 @@ import {SlideToggleFieldDataInterface} from './slideToggle.interfaces'
 
 @Component({
 	selector: 'rui-slide-toggle',
-	templateUrl: './slideToggle.template.pug'
-	// template: require('./slideToggle.template.pug')
+	templateUrl: './slideToggle.template.html'
 })
 export class SlideToggleComponent extends BaseInputComponent {
 	@Input()

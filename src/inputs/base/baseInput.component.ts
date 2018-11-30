@@ -12,7 +12,7 @@ export class BaseInputComponent implements OnInit {
 		notAValidEmail: 'Please enter a valid email.',
 		required: 'This field is required.'
 	}
-	JSObject: Object = Object
+	JSObject: any = Object
 
 
 	constructor() {
