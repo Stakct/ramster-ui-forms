@@ -1,3 +1,6 @@
+# 0.0.6
+- Publishing only the dist folder. Naming changes.
+
 # 0.0.5
 - The app is now being built using ng-packagr.
 - Removed old dependencies.
