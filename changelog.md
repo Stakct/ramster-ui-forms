@@ -1,3 +1,6 @@
+# 0.0.7
+- Updated the deps.
+
 # 0.0.6
 - Publishing only the dist folder. Naming changes.
 

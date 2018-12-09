@@ -1,6 +1,6 @@
 {
   "name": "ramster-ui-forms",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A forms and inputs package that goes together with the other ramster-ui packages.",
   "main": "dist/bundles/ramster-ui-forms.umd.js",
   "scripts": {
@@ -47,7 +47,7 @@
     "node-sass": "^4.10.0",
     "popper.js": "^1.14.5",
     "pug": "^2.0.3",
-    "ramster-ui-core": "0.0.9",
+    "ramster-ui-core": "0.0.11",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.3.3",
     "tsickle": "^0.34.0",
