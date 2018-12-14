@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core'
 import {FormControl} from '@angular/forms'
+import {Subject} from 'rxjs'
 
 import {AutocompleteFieldDataInterface} from './autocomplete.interfaces'
 import {BaseInputComponent} from '../base/baseInput.component'
@@ -62,6 +63,9 @@ export class AutocompleteComponent extends BaseInputComponent {
 				this.searchBox.patchValue('')
 				this.fieldData.inputFormControl.patchValue(null)
 				if ((value === null) || (value === '')) {
+					if (this.fieldData.masterInputFormControlValueChangesCallback instanceof Subject) {
+						this.fieldData.masterInputFormControlValueChangesCallback.next(value)
+					}
 					return
 				}
 				let {filters, ...otherArgs} = this.fieldData.selectListRESTServiceArgs || this.defaultSelectListRESTServiceArgs
@@ -72,6 +76,9 @@ export class AutocompleteComponent extends BaseInputComponent {
 				otherArgs.filters = filters
 				this.fieldData.selectListRESTService.readSelectList(otherArgs).then((res) => {
 						this.fieldData.selectList = res
+						if (this.fieldData.masterInputFormControlValueChangesCallback instanceof Subject) {
+							this.fieldData.masterInputFormControlValueChangesCallback.next(value)
+						}
 					}, (err) => false
 				)
 			})

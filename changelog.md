@@ -1,3 +1,7 @@
+# 0.0.8
+- Added an optional callback Observable Subject to AutocompleteFieldDataInterface to be called when the masterInputFormControl's value has changed and the select list has finished loading.
+- Updated the ramster-ui-core peerDep.
+
 # 0.0.7
 - Updated the deps.
 
