@@ -1,3 +1,6 @@
+# 0.0.9
+- Added a currentSelectionIndex to the autocomplete input component and wrote functionality for setting the searchbox value when the inputFormControl value is patched externally.
+
 # 0.0.8
 - Added an optional callback Observable Subject to AutocompleteFieldDataInterface to be called when the masterInputFormControl's value has changed and the select list has finished loading.
 - Updated the ramster-ui-core peerDep.

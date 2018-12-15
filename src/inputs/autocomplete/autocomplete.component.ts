@@ -14,6 +14,7 @@ export class AutocompleteComponent extends BaseInputComponent {
 	@Input()
 	fieldData: AutocompleteFieldDataInterface = {} as AutocompleteFieldDataInterface
 
+	currentSelectionIndex: number = -1
 	defaultSelectListRESTServiceArgs = {titleField: 'name', orderBy: 'name', orderDirection: 'asc'}
 	filteredSelectList: SelectListInterface[] = []
 	filteredSelectListMaxLength: number = 4
@@ -48,7 +49,25 @@ export class AutocompleteComponent extends BaseInputComponent {
 		})
 		this.fieldData.inputFormControl.valueChanges.subscribe((value) => {
 			if (value === null) {
+				this.currentSelectionIndex = -1
 				this.searchBox.patchValue('')
+				return
+			}
+			const {filteredSelectList} = this
+			let valuePatched = false
+			if (value !== filteredSelectList[this.currentSelectionIndex].value) {
+				for (const i in filteredSelectList) {
+					const listItem = filteredSelectList[i]
+					if (value === listItem.value) {
+						this.currentSelectionIndex = parseInt(i, 10)
+						this.searchBox.patchValue(listItem.text)
+						valuePatched = true
+						break
+					}
+				}
+			}
+			if (!valuePatched) {
+				this.fieldData.inputFormControl.patchValue(null)
 			}
 		})
 
@@ -60,7 +79,6 @@ export class AutocompleteComponent extends BaseInputComponent {
 		) {
 			this.fieldData.masterInputFormControl.valueChanges.subscribe((value) => {
 				this.fieldData.selectList = []
-				this.searchBox.patchValue('')
 				this.fieldData.inputFormControl.patchValue(null)
 				if ((value === null) || (value === '')) {
 					if (this.fieldData.masterInputFormControlValueChangesCallback instanceof Subject) {
@@ -121,9 +139,10 @@ export class AutocompleteComponent extends BaseInputComponent {
 		}, 100)
 	}
 
-	onSelectionChange(event: any, value: any): void {
+	onSelectionChange(event: any, value: any, index: number): void {
 		const inputFormControl = this.fieldData.inputFormControl
 		if (event.source.selected && (inputFormControl.value !== value)) {
+			this.currentSelectionIndex = index
 			inputFormControl.patchValue(value)
 		}
 	}

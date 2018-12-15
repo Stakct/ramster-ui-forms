@@ -4,4 +4,4 @@ mat-form-field
 	mat-error(*ngIf='searchBox.invalid && (searchBox.dirty || searchBox.touched) && searchBox.errors')
 		span(*ngFor='let errorKey of JSObject.keys(searchBox.errors)') {{errorMessages[errorKey]}}
 	mat-autocomplete(#autocompleteElement='matAutocomplete')
-		mat-option(*ngFor='let item of filteredSelectList', [value]='item.text', (onSelectionChange)='onSelectionChange($event, item.value)') {{item.text}}
+		mat-option(*ngFor='let item of filteredSelectList; let i = index', [value]='item.text', (onSelectionChange)='onSelectionChange($event, item.value, i)') {{item.text}}
