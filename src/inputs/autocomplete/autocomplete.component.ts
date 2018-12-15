@@ -66,9 +66,9 @@ export class AutocompleteComponent extends BaseInputComponent {
 						break
 					}
 				}
-			}
-			if (!valuePatched) {
-				this.fieldData.inputFormControl.patchValue(null)
+				if (!valuePatched) {
+					this.fieldData.inputFormControl.patchValue(null)
+				}
 			}
 		})
 

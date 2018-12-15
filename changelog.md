@@ -1,3 +1,6 @@
+# 0.0.11
+- And another one.
+
 # 0.0.10
 - Fix for the functionality from the latest version.
 
