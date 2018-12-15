@@ -1,3 +1,6 @@
+# 0.0.10
+- Fix for the functionality from the latest version.
+
 # 0.0.9
 - Added a currentSelectionIndex to the autocomplete input component and wrote functionality for setting the searchbox value when the inputFormControl value is patched externally.
 
