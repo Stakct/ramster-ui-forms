@@ -53,12 +53,12 @@ export class AutocompleteComponent extends BaseInputComponent {
 				this.searchBox.patchValue('')
 				return
 			}
-			const {filteredSelectList} = this,
-				currentItem = filteredSelectList[this.currentSelectionIndex]
+			const selectList = this.fieldData.selectList,
+				currentItem = selectList[this.currentSelectionIndex]
 			let valuePatched = false
 			if (!currentItem || (value !== currentItem.value)) {
-				for (const i in filteredSelectList) {
-					const listItem = filteredSelectList[i]
+				for (const i in selectList) {
+					const listItem = selectList[i]
 					if (value === listItem.value) {
 						this.currentSelectionIndex = parseInt(i, 10)
 						this.searchBox.patchValue(listItem.text)
