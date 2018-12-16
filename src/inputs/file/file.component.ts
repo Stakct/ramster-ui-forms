@@ -32,26 +32,26 @@ export class FileInputComponent extends BaseInputComponent {
 
 	ngOnInit(): void {
 		super.ngOnInit()
-		const {previewHeight, previewWidth} = this.fieldData
+		const {inputFormControl, previewHeight, previewWidth} = this.fieldData
 		if (previewHeight) {
 			this.previewHeight = previewHeight
 		}
 		if (previewWidth) {
 			this.previewWidth = previewWidth
 		}
+		inputFormControl.valueChanges.subscribe((value) => {
+			if (value === '') {
+				this.backgroundImageUrl = ''
+				this.fileName = ''
+				inputFormControl.markAsDirty()
+			}
+		})
 	}
 
 	getExtName(fileName: string): string {
 		const extNameRegex = new RegExp(/\.[^/.]+$/)
 		let extName = extNameRegex.exec(fileName) as any
 		return extName && extName[0] || ''
-	}
-
-	setValueToEmpty(): void {
-		this.backgroundImageUrl = ''
-		this.fileName = ''
-		this.fieldData.inputFormControl.patchValue('')
-		this.fieldData.inputFormControl.markAsDirty()
 	}
 
 	/* direct uploads:
@@ -71,7 +71,7 @@ export class FileInputComponent extends BaseInputComponent {
 		// if the user has deselected the currently selected file
 		if (!file) {
 			if (inputFormControl.value !== '') {
-				this.setValueToEmpty()
+				inputFormControl.patchValue('')
 			}
 			return
 		}
@@ -83,13 +83,13 @@ export class FileInputComponent extends BaseInputComponent {
 		// check whether the file type is allowed by extension
 		if ((allowedFileTypes instanceof Array) && (allowedFileTypes.indexOf(extName) === -1)) {
 			this.globalEventsService.notify('error', 'The provided file\'s type is not allowed for this field.')
-			this.setValueToEmpty()
+			inputFormControl.patchValue('')
 			return
 		}
 		// check wthere the file size is ok
 		if (fileSize > maxFileSize) {
 			this.globalEventsService.notify('error', 'The provided file is too large.')
-			this.setValueToEmpty()
+			inputFormControl.patchValue('')
 			return
 		}
 		if (directUpload) {
@@ -99,17 +99,17 @@ export class FileInputComponent extends BaseInputComponent {
 					this.backgroundImageUrl = `url('/storage/tmp/${outputFileName}')`
 					this.fileName = fileName
 					inputFormControl.patchValue(outputFileName)
-					this.fieldData.inputFormControl.markAsDirty()
+					inputFormControl.markAsDirty()
 				},
 				(err) => {
 					this.globalEventsService.notify('error', `Error uploading the file: ${err.message || 'Internal server error.'}`)
-					this.setValueToEmpty()
+					inputFormControl.patchValue('')
 				}
 			)
 			return
 		}
 		this.fileName = fileName
 		inputFormControl.patchValue(file)
-		this.fieldData.inputFormControl.markAsDirty()
+		inputFormControl.markAsDirty()
 	}
 }
