@@ -1,3 +1,8 @@
+# 0.0.14
+- Added a test folder and a small test app in it.
+- Added the dist folder to gitignore.
+- Removed the test folder from gitignore.
+
 # 0.0.13
 - File input update.
 

@@ -1,9 +1,10 @@
 {
   "name": "ramster-ui-forms",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "A forms and inputs package that goes together with the other ramster-ui packages.",
   "main": "dist/bundles/ramster-ui-forms.umd.js",
   "scripts": {
+    "testApp": "(node test/server.js & node test/webpack.devserver.js) || echo 'Could not start the test app'",
     "build": "node prePackageBuild.js & ng-packagr -p package.json",
     "publish": "npm publish dist"
   },
@@ -32,26 +33,40 @@
     "@angular/compiler": "^7.1.0",
     "@angular/compiler-cli": "^7.1.0",
     "@angular/core": "^7.1.0",
+    "@angular/flex-layout": "^7.0.0-beta.22",
     "@angular/forms": "^7.1.0",
     "@angular/material": "^7.1.0",
     "@angular/platform-browser": "^7.1.0",
     "@angular/router": "^7.1.0",
+    "@ngtools/webpack": "^7.1.4",
     "@types/hammerjs": "^2.0.36",
     "@types/node": "^10.12.10",
+    "bell-on-bundler-error-plugin": "^2.0.0",
     "co": "^4.6.0",
     "core-js": "^2.5.7",
+    "css-loader": "^2.1.0",
+    "express": "^4.16.4",
     "fs-extra": "^7.0.1",
     "hammerjs": "^2.0.8",
+    "html-loader": "^0.5.5",
     "moment": "^2.22.2",
     "ng-packagr": "^4.4.0",
     "node-sass": "^4.10.0",
     "popper.js": "^1.14.5",
+    "progress-bar-webpack-plugin": "^1.11.0",
     "pug": "^2.0.3",
-    "ramster-ui-core": "0.0.11",
+    "pug-html-loader": "^1.1.5",
+    "ramster-ui-core": "0.0.12",
+    "raw-loader": "^1.0.0",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.3.3",
+    "sass-loader": "^7.1.0",
+    "to-string-loader": "^1.1.5",
     "tsickle": "^0.34.0",
     "typescript": "^3.1.6",
+    "webpack": "^4.28.3",
+    "webpack-dev-server": "^3.1.14",
     "zone.js": "^0.8.26"
   },
   "peerDependencies": {
@@ -61,6 +76,6 @@
     "@angular/material": "^7.1.0",
     "@types/hammerjs": "^2.0.36",
     "hammerjs": "^2.0.8",
-    "ramster-ui-core": "^0.0.11"
+    "ramster-ui-core": "^0.0.12"
   }
 }

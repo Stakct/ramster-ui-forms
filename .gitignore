@@ -6,9 +6,4 @@ error.log
 npm-debug.log
 debug.log
 .vscode
-test
-!test/generateStuff.js
-!test/test.js
-package-lock.json
-dist/*
-!dist/main.js
+dist
