@@ -1,7 +1,7 @@
 import {CommonModule} from '@angular/common'
 import {ReactiveFormsModule} from '@angular/forms'
 import {ModuleWithProviders, NgModule} from '@angular/core'
-import {MatAutocompleteModule, MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatSlideToggleModule} from '@angular/material'
+import {MatAutocompleteModule, MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatSlideToggleModule} from '@angular/material'
 
 import {AutocompleteComponent} from './autocomplete/autocomplete.component'
 import {CheckboxComponent} from './checkbox/checkbox.component'
@@ -17,8 +17,10 @@ import {TextareaComponent} from './textarea/textarea.component'
 		MatAutocompleteModule,
 		MatButtonModule,
 		MatCheckboxModule,
+		MatDatepickerModule,
 		MatFormFieldModule,
 		MatInputModule,
+		MatNativeDateModule,
 		MatSlideToggleModule,
 		ReactiveFormsModule
 	],

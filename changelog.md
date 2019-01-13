@@ -1,3 +1,9 @@
+# 0.0.15
+- Added a wrapper div to the checkbox.
+- Finally fixed the datepicker.
+- Fixed the slideToggle by replacing the mat-form-field wrapper with a div.
+- Extended the testApp to include everything.
+
 # 0.0.14
 - Added a test folder and a small test app in it.
 - Added the dist folder to gitignore.
