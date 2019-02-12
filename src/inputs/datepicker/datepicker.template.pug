@@ -1,7 +1,7 @@
 doctype html
 mat-form-field
 	//- input(matInput, [formControl]='fieldData.inputFormControl', [placeholder]='fieldData.placeholder')
-	input(matInput, [matDatepicker]='picker', [placeholder]='fieldData.placeholder', [formControl]='fieldData.inputFormControl')
+	input(matInput, [matDatepicker]='picker', [placeholder]='fieldData.placeholder', [attr.autocomplete]='noAutofillAttr', [formControl]='fieldData.inputFormControl')
 	mat-datepicker-toggle(matSuffix, [for]='picker')
 	mat-datepicker(#picker)
 	include ../base/baseInput.commonElementsTemplate.pug
