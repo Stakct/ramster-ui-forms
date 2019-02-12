@@ -12,6 +12,7 @@ export class InputComponent extends BaseInputComponent {
 	@Input()
 	fieldData: InputFieldDataInterface
 
+	noAutofillAttr: number = (new Date()).getTime()
 
 	constructor() {
 		super()
