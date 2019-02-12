@@ -11,7 +11,8 @@ import {DatepickerFieldDataInterface} from './datepicker.interfaces'
 export class DatepickerComponent extends BaseInputComponent {
 	@Input()
 	fieldData: DatepickerFieldDataInterface
-
+	
+	noAutofillAttr: number = (new Date()).getTime()
 
 	constructor() {
 		super()
